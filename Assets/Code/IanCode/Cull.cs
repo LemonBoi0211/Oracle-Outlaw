@@ -24,7 +24,6 @@ public class Cull : MonoBehaviour
     void Update()
     {
         
-        
         Vector3 randomSP = new Vector3(0,(Height / 2) / -1 - (1) , 0);
         transform.position = randomSP;
 

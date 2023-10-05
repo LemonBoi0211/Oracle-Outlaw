@@ -2,18 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ScoreDisplay : MonoBehaviour
 {
+    public TMP_Text scoreText;
+    private int score;
+    private float timer;
 
-    public Text scoreText;
-    public Text pointsText;
-
-    int points = 0;
-
-    // Start is called before the first frame update
     void Start()
     {
-        pointsText.text = scoreText.ToString() + " POINTS";
+        scoreText.text = "Score: ";
     }
+
+    void Update()
+    {
+        timer += Time.deltaTime;
+
+        if(timer > 1f)
+        {
+            score += 1;
+
+            scoreText.text = "Score: " + score;
+
+            timer = 0;
+        }
+    }
+
 }
