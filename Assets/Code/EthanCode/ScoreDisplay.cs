@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class NewBehaviourScript1 : MonoBehaviour
+public class ScoreDisplay : MonoBehaviour
 {
 
     public Text scoreText;
@@ -13,12 +14,6 @@ public class NewBehaviourScript1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pointsText.text = score.ToString() + " POINTS";
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        pointsText.text = scoreText.ToString() + " POINTS";
     }
 }
