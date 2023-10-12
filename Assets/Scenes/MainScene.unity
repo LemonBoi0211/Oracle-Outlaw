@@ -149,11 +149,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 121452013}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1588b790f8fc6946b51de39d625af68, type: 3}
+  m_Script: {fileID: 11500000, guid: e907ace54955a4a4abe31d9cc07457c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawn: 0
-  Object: {fileID: 8991541120999457755, guid: d3614bda99962fe4cb7e9d077e27123a, type: 3}
+  Danger: {fileID: 8991541120999457755, guid: e8cdabb5708fe1849944ab39e4fb0871, type: 3}
+  Collectable: {fileID: 3381388542827946261, guid: 27b1df8747cdcbe4abae9ac1f34a5732, type: 3}
 --- !u!4 &121452015
 Transform:
   m_ObjectHideFlags: 0
@@ -270,7 +271,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 229480847}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0daca0405a7e4dc488c4bbdf8afdc130, type: 3}
+  m_Script: {fileID: 11500000, guid: 532db981eafbe1040bf29373551ef05a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Height: 0

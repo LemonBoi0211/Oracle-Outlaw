@@ -24,6 +24,7 @@ public class Cull : MonoBehaviour
     void Update()
     {
         
+        
         Vector3 randomSP = new Vector3(0,(Height / 2) / -1 - (1) , 0);
         transform.position = randomSP;
 
@@ -36,7 +37,7 @@ public class Cull : MonoBehaviour
     public void OnTriggerEnter2D (Collider2D collision)
     {
          Debug.Log("hit");
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy" );
         {
             //If the GameObject has the same tag as specified, output this message in the console
             Debug.Log("Dead");

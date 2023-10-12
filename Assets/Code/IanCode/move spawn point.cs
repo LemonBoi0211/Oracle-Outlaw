@@ -6,7 +6,8 @@ using UnityEngine;
 public class movespawnpoint : MonoBehaviour
 {
     public bool spawn;
-    public GameObject Object;
+    public GameObject Danger;
+    public GameObject Collectable;
     Camera cam;
     float Width;
     float Height;
@@ -57,6 +58,7 @@ public class movespawnpoint : MonoBehaviour
         {
             //Debug.Log("mark");
             StartCoroutine(MoveSpawnPoint());
+           // StartCoroutine(MoveSpawnPoint());
             spawn = false;
         }
 
@@ -68,14 +70,24 @@ public class movespawnpoint : MonoBehaviour
 
     private IEnumerator MoveSpawnPoint()
     {
+        for (int i = 0; i < 3; i++)
+        {
+             yield return new WaitForSeconds(1.0f); //adds delay
+         Vector3 LrandomSP = new Vector3(UnityEngine.Random.Range(topleft.x, topright.x), (Height/2+1), 0); //picks random spot moves to
+        transform.position = LrandomSP;
+        Instantiate(Danger, transform.position, transform.rotation);
+        }
         yield return new WaitForSeconds(1.0f); //adds delay
-         Vector3 randomSP = new Vector3(UnityEngine.Random.Range(topleft.x, topright.x), (Height/2+1), 0); //picks random spot moves to
+        Vector3 CrandomSP = new Vector3(UnityEngine.Random.Range(topleft.x, topright.x), (Height / 2 + 1), 0); //picks random spot moves to
+        transform.position = CrandomSP;
+        Instantiate(Collectable, transform.position, transform.rotation);
+        Vector3 randomSP = new Vector3(UnityEngine.Random.Range(topleft.x, topright.x), (Height / 2 + 1), 0); //picks random spot moves to
         transform.position = randomSP;
-        Instantiate(Object, transform.position, transform.rotation);
+        Instantiate(Danger, transform.position, transform.rotation);
 
         spawn = true;//resets loop
        // Debug.Log("moved");
     }
-   
-   
+    
+
 }
