@@ -7,7 +7,7 @@ using TMPro;
 public class ScoreDisplay : MonoBehaviour
 {
     public TMP_Text scoreText;
-    private int score;
+    public int score;
     private float timer;
 
     void Start()

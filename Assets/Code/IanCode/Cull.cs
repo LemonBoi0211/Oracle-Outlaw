@@ -29,15 +29,11 @@ public class Cull : MonoBehaviour
         transform.position = randomSP;
 
     }
-   /* void OnCollisionEnter(Collision collision)
-    {
-       
-    }*/
 
     public void OnTriggerEnter2D (Collider2D collision)
     {
          Debug.Log("hit");
-        if (collision.gameObject.tag == "Enemy" );
+        if (collision.gameObject.tag == "Enemy" )
         {
             //If the GameObject has the same tag as specified, output this message in the console
             Debug.Log("Dead");
