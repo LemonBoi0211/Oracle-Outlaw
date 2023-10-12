@@ -481,7 +481,7 @@ MonoBehaviour:
   smallOrbitP: {fileID: 949160567}
   desiredPos: {x: 5, y: 5, z: 0}
   radius: 2
-  radiusSpeed: 0.5
+  radiusSpeed: 1
   rotSpeed: 80
 --- !u!212 &565887234
 SpriteRenderer:
@@ -747,6 +747,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1923738236}
   - component: {fileID: 1923738235}
+  - component: {fileID: 1923738237}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -786,6 +787,18 @@ Transform:
   - {fileID: 229480852}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1923738237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923738234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a01deb67015650429442b42f7e9e7a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2119784071
 GameObject:
   m_ObjectHideFlags: 0
