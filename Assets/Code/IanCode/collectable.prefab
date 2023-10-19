@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8750775991561865581}
   - component: {fileID: 5323487149870756104}
   - component: {fileID: 7651896102761285618}
+  - component: {fileID: -8826373368348116933}
   m_Layer: 0
   m_Name: collectable
   m_TagString: Collectable
@@ -30,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.96, y: 0.5733896, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,8 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.08568478, a: 1}
+  m_Sprite: {fileID: 1612735507, guid: 5366663e8c8cda145ab34684f25a3950, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -148,7 +149,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.9033942
 --- !u!114 &7651896102761285618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,4 +162,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8554feee6b690034b84ba25040a7b607, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSpeed: 0.3
+  fallSpeed: 0.1
+--- !u!114 &-8826373368348116933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3381388542827946261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd988658ecb9b74797f0276efd5aa8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateSpeed: 90
