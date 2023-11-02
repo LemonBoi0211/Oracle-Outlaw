@@ -5,10 +5,10 @@ using Unity.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Animations;
 
-public class StartGame : MonoBehaviour
+public class Retry : MonoBehaviour
 {
     
-   /* Animator anim;
+    Animator anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,5 +35,5 @@ public class StartGame : MonoBehaviour
         anim.SetBool("BlowUp", true);
        yield return new WaitForSeconds(1.0f);
         SceneManager.LoadScene("MainScene");
-    }*/
+    }
 }

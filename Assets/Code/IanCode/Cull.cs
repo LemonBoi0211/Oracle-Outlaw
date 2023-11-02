@@ -12,7 +12,7 @@ public class Cull : MonoBehaviour
     {
         cam = Camera.main;
         ScreenSize();
-        Debug.Log("Spawned");
+       // Debug.Log("Spawned");
     }
     void ScreenSize()
     {
@@ -32,17 +32,17 @@ public class Cull : MonoBehaviour
 
     public void OnTriggerEnter2D (Collider2D collision)
     {
-         Debug.Log("hit");
+        // Debug.Log("hit");
         if (collision.gameObject.tag == "Enemy" )
         {
             //If the GameObject has the same tag as specified, output this message in the console
-            Debug.Log("Dead");
+           // Debug.Log("Dead");
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "Collectable")
         {
             //If the GameObject has the same tag as specified, output this message in the console
-            Debug.Log("Dead");
+           // Debug.Log("Dead");
             Destroy(collision.gameObject);
         }
     }

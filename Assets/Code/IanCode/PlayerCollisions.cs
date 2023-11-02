@@ -21,7 +21,7 @@ public class PlayerCollisions : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("hitC");
+        //Debug.Log("hitC");
         if (collision.gameObject.tag == "Collectable")
         {
             //If the GameObject has the same tag as specified, output this message in the console
@@ -30,11 +30,11 @@ public class PlayerCollisions : MonoBehaviour
             Destroy(collision.gameObject);
 
         }
-        Debug.Log("hitD");
+        //Debug.Log("hitD");
         if (collision.gameObject.tag == "Enemy")
         {
             //If the GameObject has the same tag as specified, output this message in the console
-            Debug.Log("Dead");
+           // Debug.Log("Dead");
             SceneManager.LoadScene("EndScreen");
 
         }
