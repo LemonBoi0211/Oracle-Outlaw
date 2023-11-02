@@ -8,7 +8,7 @@ using UnityEngine.Animations;
 public class StartGame : MonoBehaviour
 {
     
-   /* Animator anim;
+    public Animator anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,9 +31,9 @@ public class StartGame : MonoBehaviour
     private IEnumerator Pressed()
     {
         Debug.Log("ipress");
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
         anim.SetBool("BlowUp", true);
        yield return new WaitForSeconds(1.0f);
         SceneManager.LoadScene("MainScene");
-    }*/
+    }
 }
