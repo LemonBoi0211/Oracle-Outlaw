@@ -1,14 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.UI;
 using UnityEngine.SceneManagement;
 
-
-public class StartGame : TriggerStartButton
+public class Restart1 : MonoBehaviour
 {
-    public TriggerStartButton tsb;
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -20,21 +16,9 @@ public class StartGame : TriggerStartButton
     {
         
     }
-
     public void OnButtonPress()
     {
-        
-        StartCoroutine(Pressed());
-        tsb.setButtonPressed(true);
-        Debug.Log("click");
-    }
-    private IEnumerator Pressed()
-    {
-        Debug.Log("ipress");
-       
-        
-        yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene("MainScene");
-    }
 
+    }
 }

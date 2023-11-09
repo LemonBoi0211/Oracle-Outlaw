@@ -6,9 +6,9 @@ public class PlayerControl : MonoBehaviour
 {
     public Transform smallOrbitP;
     public Vector3 desiredPos;
-    public float radius = 2.0f;
-    public float radiusSpeed = 1.0f;
-    public float rotSpeed = 100.0f;
+    public float radius = 2.5f;
+    public float radiusSpeed = 0.5f;
+    public float rotSpeed = 150.0f;
 
     // Start is called before the first frame update
     void Start()
