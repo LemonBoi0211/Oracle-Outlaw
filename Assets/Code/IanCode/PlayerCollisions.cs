@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerCollisions : MonoBehaviour
 {
     public ScoreDisplay collectScore;
+    public AudioSource coinCollected;
 
 
     // Start is called before the first frame update
@@ -25,8 +26,9 @@ public class PlayerCollisions : MonoBehaviour
         if (collision.gameObject.tag == "Collectable")
         {
             //If the GameObject has the same tag as specified, output this message in the console
-            Debug.Log("Point");
+           // Debug.Log("Point");
             collectScore.score += 30;
+            coinCollected.Play();
             Destroy(collision.gameObject);
 
         }

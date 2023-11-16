@@ -5,20 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class Restart1 : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public AudioSource clipSource;
+    public AudioClip clickclip;
+    public AudioClip[] clickArray;
+    private bool canSwitch = false;
     public void OnButtonPress()
     {
-        SceneManager.LoadScene("MainScene");
+       int index = Random.Range(0, clickArray.Length);
+       clickclip = clickArray[index];
+       clipSource.clip = clickclip;
+        clipSource.Play();
+        canSwitch = true;
+    }
+    private void Update()
+    {
 
+       if (!clipSource.isPlaying && canSwitch)//defults true
+       { 
+          SceneManager.LoadScene("MainScene");
+       }
     }
 }
