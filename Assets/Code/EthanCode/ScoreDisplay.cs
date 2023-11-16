@@ -8,6 +8,7 @@ public class ScoreDisplay : MonoBehaviour
 {
     public TMP_Text scoreText;
     public int score;
+    public int hiScore;
     private float timer;
 
     void Start()
@@ -27,6 +28,19 @@ public class ScoreDisplay : MonoBehaviour
 
             timer = 0;
         }
+
+        if(score > hiScore)
+        {
+            hiScore = score;
+        }
+
+        int originalHiScore = PlayerPrefs.GetInt("High Score", 0);
+        if(hiScore > originalHiScore)
+        {
+            PlayerPrefs.SetInt("High Score", hiScore);
+        }
+
+        PlayerPrefs.SetInt("Current Score", score);
     }
 
 }
