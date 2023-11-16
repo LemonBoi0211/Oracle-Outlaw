@@ -7,9 +7,15 @@ using TMPro;
 public class ScoreDisplay : MonoBehaviour
 {
     public TMP_Text scoreText;
+
     public int score;
     public int hiScore;
+    private int pointGain = 1;
+
     private float timer;
+    private float timerThreshold = 1;
+    public int timePassedSeconds = 0;
+    private int thirtySec = 0;
 
     void Start()
     {
@@ -20,16 +26,22 @@ public class ScoreDisplay : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if(timer > 1f)
+        if(timer >= timerThreshold)
         {
-            score += 1;
-
-            scoreText.text = "Score: " + score;
-
+            score += pointGain;
             timer = 0;
+            timePassedSeconds++;
+            thirtySec++;
+            if(thirtySec > 29)
+            {
+                thirtySec = 0;
+                pointGain++;
+            }
         }
 
-        if(score > hiScore)
+        scoreText.text = "Score: " + score;
+
+        if (score > hiScore)
         {
             hiScore = score;
         }
@@ -42,5 +54,4 @@ public class ScoreDisplay : MonoBehaviour
 
         PlayerPrefs.SetInt("Current Score", score);
     }
-
 }
