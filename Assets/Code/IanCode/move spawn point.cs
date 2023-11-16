@@ -30,8 +30,8 @@ public class movespawnpoint : MonoBehaviour
     }
     void ScreenSize ()
     {
-        Width = 1 / (cam.WorldToViewportPoint(new Vector3(1, 1, 0)).x - .5f);
-        Height = 1 / (cam.WorldToViewportPoint(new Vector3(1, 1, 0)).y - .5f);
+        Width = 1 / (cam.WorldToViewportPoint(new Vector3(1, 1, 0)).x - 0.5f);
+        Height = 1 / (cam.WorldToViewportPoint(new Vector3(1, 1, 0)).y - 0.5f);
 
     } 
     void ScreenCorners ()
