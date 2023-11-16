@@ -12,7 +12,7 @@ public class FortuneGen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        string fortuneGen = wordArray.wordAdj[Random.Range(0, wordArray.wordAdj.Length)] + " " + wordArray.wordnoun[Random.Range(0, wordArray.wordnoun.Length)] + " " + wordArray.wordverb[Random.Range(0, wordArray.wordverb.Length)] + " " + wordArray.wordAdj[Random.Range(0, wordArray.wordAdj.Length)] + " " + wordArray.wordnoun[Random.Range(0, wordArray.wordnoun.Length)];
+        string fortuneGen = "a " + wordArray.wordAdj[Random.Range(0, wordArray.wordAdj.Length)] + " " + wordArray.wordnoun[Random.Range(0, wordArray.wordnoun.Length)] + " " + wordArray.wordverb[Random.Range(0, wordArray.wordverb.Length)] + " a " + wordArray.wordAdj[Random.Range(0, wordArray.wordAdj.Length)] + " " + wordArray.wordnoun[Random.Range(0, wordArray.wordnoun.Length)];
 
         fortuneTold.text = fortuneGen;
 

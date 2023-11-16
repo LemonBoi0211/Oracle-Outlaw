@@ -4,27 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class ToMenu : MonoBehaviour
 {
-    public AudioSource clipSource;
-    public AudioClip clickclip;
-    public AudioClip[] clickArray;
-    private bool canSwitch = false;
+    
     public void OnButtonPress()
     {
-        int index = Random.Range(0, clickArray.Length);
-        clickclip = clickArray[index];
-        clipSource.clip = clickclip;
-        clipSource.Play();
-        canSwitch = true;
-    }
-    private void Update()
-    {
-
-        if (!clipSource.isPlaying && canSwitch)//defults true
-        {
-           SceneManager.LoadScene("StartScreen");
-        }
-            
+       
+       
+        SceneManager.LoadScene("StartScreen");
         
-       // Debug.Log("Button clicked ");
+        Debug.Log("Button clicked ");
     }
 }

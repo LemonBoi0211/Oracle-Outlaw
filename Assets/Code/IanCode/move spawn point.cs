@@ -41,10 +41,6 @@ public class movespawnpoint : MonoBehaviour
         Vector2 BottomRight = new Vector2(Width / 2, -Height / 2);
         Vector2 BottomLeft = new Vector2(-Width / 2, -Height / 2);
         Vector2 TopLeft = new Vector2(-Width / 2, Height / 2);
-       // Debug.Log("Top right" + TopRight);
-      //  Debug.Log("Top left" + TopLeft); 
-      //  Debug.Log("bottom right" + BottomRight);
-      //  Debug.Log("bottom left" + BottomLeft);
         topright = TopRight;
         topleft = TopLeft;
         bottomright = BottomRight;
@@ -56,27 +52,21 @@ public class movespawnpoint : MonoBehaviour
     {
         if (spawn == true)//prevents couroutine being called every update
         {
-            //Debug.Log("mark");
             StartCoroutine(MoveSpawnPoint());
-           // StartCoroutine(MoveSpawnPoint());
             spawn = false;
         }
-
-        //debug check/log
-       // Debug.Log("height" + Height);
-      //  Debug.Log(Width);
-        
     }
 
     private IEnumerator MoveSpawnPoint()
     {
         for (int i = 0; i < 3; i++)
         {
-             yield return new WaitForSeconds(1.0f); //adds delay
-         Vector3 LrandomSP = new Vector3(UnityEngine.Random.Range(topleft.x, topright.x), (Height/2+1), 0); //picks random spot moves to
-        transform.position = LrandomSP;
-        Instantiate(Danger, transform.position, transform.rotation);
+            yield return new WaitForSeconds(1.0f); //adds delay
+            Vector3 LrandomSP = new Vector3(UnityEngine.Random.Range(topleft.x, topright.x), (Height/2+1), 0); //picks random spot moves to
+            transform.position = LrandomSP;
+            Instantiate(Danger, transform.position, transform.rotation);
         }
+
         yield return new WaitForSeconds(1.0f); //adds delay
         Vector3 CrandomSP = new Vector3(UnityEngine.Random.Range(topleft.x, topright.x), (Height / 2 + 1), 0); //picks random spot moves to
         transform.position = CrandomSP;
@@ -88,6 +78,4 @@ public class movespawnpoint : MonoBehaviour
         spawn = true;//resets loop
        // Debug.Log("moved");
     }
-    
-
 }
