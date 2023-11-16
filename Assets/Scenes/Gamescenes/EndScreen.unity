@@ -558,8 +558,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f35c4ab3123da54ead86ed88edda215, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  click: {fileID: 0}
-  clickArray: []
+  clipSource: {fileID: 1296573246}
+  clickclip: {fileID: 0}
+  clickArray:
+  - {fileID: 8300000, guid: 86e6a19d0cf52284fae114331da35561, type: 3}
+  - {fileID: 8300000, guid: 0cd2c33ef7a987b4798eea492fbb4601, type: 3}
+  - {fileID: 8300000, guid: 0214d853c5380b04d8d36d92dbf15e90, type: 3}
+  - {fileID: 8300000, guid: 1166a967dd0aaf44fb820ce3157b04b7, type: 3}
+  - {fileID: 8300000, guid: 307c8e3d73de23a47ae568df1539b4bf, type: 3}
+  - {fileID: 8300000, guid: ac0d64d6908173144b23ed32145016b6, type: 3}
+  - {fileID: 8300000, guid: 6fa39348b2cd05643ab98f58274b751d, type: 3}
 --- !u!114 &1296573245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -572,7 +580,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc3c3ce577dcb114cb0d11f19eb4d45b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  click: {fileID: 0}
+  clipSource: {fileID: 1296573246}
+  clickclip: {fileID: 0}
+  clickArray:
+  - {fileID: 8300000, guid: 86e6a19d0cf52284fae114331da35561, type: 3}
+  - {fileID: 8300000, guid: 0cd2c33ef7a987b4798eea492fbb4601, type: 3}
+  - {fileID: 8300000, guid: 0214d853c5380b04d8d36d92dbf15e90, type: 3}
+  - {fileID: 8300000, guid: 1166a967dd0aaf44fb820ce3157b04b7, type: 3}
+  - {fileID: 8300000, guid: 307c8e3d73de23a47ae568df1539b4bf, type: 3}
+  - {fileID: 8300000, guid: ac0d64d6908173144b23ed32145016b6, type: 3}
+  - {fileID: 8300000, guid: 6fa39348b2cd05643ab98f58274b751d, type: 3}
 --- !u!82 &1296573246
 AudioSource:
   m_ObjectHideFlags: 0
