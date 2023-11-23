@@ -5,6 +5,7 @@ using UnityEngine;
 public class How2Play : MonoBehaviour
 {
     public GameObject controls;
+    public GameObject pcontrols;
     public GameObject taphereCircle;
 
     private void Start()
@@ -16,6 +17,7 @@ public class How2Play : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         controls.SetActive(false);
+        pcontrols.SetActive(false);
         taphereCircle.SetActive(false);
     }
 }
