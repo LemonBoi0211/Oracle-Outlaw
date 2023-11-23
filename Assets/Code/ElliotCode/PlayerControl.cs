@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -10,11 +11,7 @@ public class PlayerControl : MonoBehaviour
     public float radiusSpeed = 0.5f;
     public float rotSpeed = 150.0f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public bool isPressed = false;
 
     // Update is called once per frame
     void Update()
@@ -22,18 +19,28 @@ public class PlayerControl : MonoBehaviour
         //counter clockwise rotation
         transform.RotateAround(smallOrbitP.localPosition, Vector3.forward, Time.deltaTime * rotSpeed);
 
-        //hold thing down, increase orbit
-        if (Input.GetKey(KeyCode.Space))
+        if (isPressed)
         {
             desiredPos = (transform.position - smallOrbitP.position).normalized * radius + smallOrbitP.position;
             transform.position = Vector3.MoveTowards(transform.position, desiredPos, Time.deltaTime * radiusSpeed);
         }
-        else 
+        else
         {
             desiredPos = (transform.position - smallOrbitP.position).normalized / radius + smallOrbitP.position;
             transform.position = Vector3.MoveTowards(transform.position, desiredPos, Time.deltaTime * radiusSpeed);
         }
-
     }
 
+    public void OnMove(InputAction.CallbackContext touch)
+    {
+        //hold thing down, increase orbit
+        if (touch.action.phase == InputActionPhase.Started)
+        {
+            isPressed = true;
+        }
+        else if (touch.action.phase == InputActionPhase.Canceled)
+        {
+            isPressed = false;
+        }
+    }
 }
